@@ -6,7 +6,7 @@ Bridges the locally installed **Kimi Code CLI** (`kimi`) into DeepSeek Harness a
 - One Host tool. No UI, no background process, no extra state.
 - Each call is **one independent kimi process** (`kimi -p ... --output-format stream-json`) that returns its final message.
 
-[中文说明](./README.md)
+[中文说明](./README.md)　｜　Repo: <https://github.com/kangseung/dsh-kimi-code>
 
 ## Requirements
 
@@ -19,18 +19,19 @@ Bridges the locally installed **Kimi Code CLI** (`kimi`) into DeepSeek Harness a
 Ask the DSH agent to install it (does both package install and bundle selection):
 
 ```
-install the bundle at /path/to/dsh-kimi-code with plugin_manager install_bundle
+install the bundle at https://github.com/kangseung/dsh-kimi-code.git with plugin_manager install_bundle
 ```
 
 Or manually:
 
 ```bash
-dsh plugin --profile web add /path/to/dsh-kimi-code   # or git+https://github.com/kangseung/dsh-kimi-code.git
+dsh plugin --profile web add git+https://github.com/kangseung/dsh-kimi-code.git
+# hacking on it locally? add the directory instead: dsh plugin --profile web add /path/to/dsh-kimi-code
 ```
 
 then add `dsh-kimi-code` to `dsh.profile.bundles` in the profile's `package.json`.
 
-Restart dsh afterwards: Host JavaScript modules are loaded once per process.
+Restart dsh afterwards: Host JavaScript modules are loaded once per process. A directory install is a symlink, so source edits also need a restart to load the new module generation.
 
 ## Usage
 

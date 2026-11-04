@@ -6,7 +6,7 @@
 - 只有一个 Host 工具，没有 UI、没有额外后台进程。
 - 每次调用是**一条独立的 kimi 进程**（`kimi -p ... --output-format stream-json`），跑完把最终答复交回来。
 
-[English README](./README.en.md)
+仓库：<https://github.com/kangseung/dsh-kimi-code>　｜　[English README](./README.en.md)
 
 ## 前置条件
 
@@ -16,21 +16,24 @@
 
 ## 安装
 
-在 DeepSeek Harness 里让 agent 安装（推荐，会同时完成包安装与 bundle 注册）：
+推荐在 DeepSeek Harness 里让 agent 直接装（会同时完成包安装与 bundle 注册）：
 
 ```
-用 plugin_manager install_bundle 安装 /path/to/dsh-kimi-code
+用 plugin_manager install_bundle 安装 https://github.com/kangseung/dsh-kimi-code.git
 ```
 
 或手动两步：
 
 ```bash
-dsh plugin --profile web add /path/to/dsh-kimi-code   # 或 git+https://github.com/kangseung/dsh-kimi-code.git
+dsh plugin --profile web add git+https://github.com/kangseung/dsh-kimi-code.git
+# 本地改代码时改用目录：dsh plugin --profile web add /path/to/dsh-kimi-code
 ```
 
 然后在 profile 的 `package.json` 里把 `dsh-kimi-code` 加进 `dsh.profile.bundles` 数组。
 
 装完**重启 dsh**（Host 侧的 JavaScript 模块只在启动时加载一代）。重启后 `kimi_code` 工具即可用。
+
+从目录安装时装的是软链，改动源码后同样要重启才会加载新的模块代。
 
 ## 使用
 
