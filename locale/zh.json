@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Kimi Code 桥接",
+    "description": "把本机 Kimi Code CLI 当作子 agent 调用：一个 kimi_code 工具即可让它开发代码或做代码评审。"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Kimi Code bridge",
+    "description": "Run the local Kimi Code CLI as a sub-agent for development work and code review through one kimi_code tool."
+  }
+}

@@ -1,0 +1,6 @@
+# dsh-kimi-code bundle patch: mount the Host plugin under its package name,
+# resolved through the profile's node_modules.
+- insert:
+    - id: dsh-kimi-code
+      name: dsh-kimi-code
+      config: {}
