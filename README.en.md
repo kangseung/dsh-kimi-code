@@ -25,7 +25,7 @@ install the bundle at /path/to/dsh-kimi-code with plugin_manager install_bundle
 Or manually:
 
 ```bash
-dsh plugin --profile web add /path/to/dsh-kimi-code   # or git+https://github.com/<you>/dsh-kimi-code.git
+dsh plugin --profile web add /path/to/dsh-kimi-code   # or git+https://github.com/kangseung/dsh-kimi-code.git
 ```
 
 then add `dsh-kimi-code` to `dsh.profile.bundles` in the profile's `package.json`.

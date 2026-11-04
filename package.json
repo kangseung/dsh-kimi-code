@@ -2,6 +2,15 @@
   "name": "dsh-kimi-code",
   "version": "0.1.0",
   "description": "DeepSeek Harness plugin: run the locally installed Kimi Code CLI as a sub-agent for development work and code review.",
+  "author": "kangseung",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kangseung/dsh-kimi-code.git"
+  },
+  "homepage": "https://github.com/kangseung/dsh-kimi-code#readme",
+  "bugs": {
+    "url": "https://github.com/kangseung/dsh-kimi-code/issues"
+  },
   "type": "module",
   "main": "index.js",
   "icon": "icon.svg",

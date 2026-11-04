@@ -25,7 +25,7 @@
 或手动两步：
 
 ```bash
-dsh plugin --profile web add /path/to/dsh-kimi-code   # 或 git+https://github.com/<you>/dsh-kimi-code.git
+dsh plugin --profile web add /path/to/dsh-kimi-code   # 或 git+https://github.com/kangseung/dsh-kimi-code.git
 ```
 
 然后在 profile 的 `package.json` 里把 `dsh-kimi-code` 加进 `dsh.profile.bundles` 数组。
